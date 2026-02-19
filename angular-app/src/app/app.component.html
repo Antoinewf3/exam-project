@@ -1,0 +1,36 @@
+<div class="container">
+  <header>
+    <h1>{{ title }}</h1>
+    <p class="subtitle">Application Angular dÃ©ployÃ©e sur EKS</p>
+  </header>
+
+  <div class="info-card">
+    <h2>Informations</h2>
+    <table>
+      <tr>
+        <td><strong>Version</strong></td>
+        <td>{{ version }}</td>
+      </tr>
+      <tr>
+        <td><strong>Environnement</strong></td>
+        <td>{{ environment }}</td>
+      </tr>
+      <tr>
+        <td><strong>Build Date</strong></td>
+        <td>{{ buildDate }}</td>
+      </tr>
+      <tr>
+        <td><strong>Statut</strong></td>
+        <td class="status-ok">{{ status }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="success-badge">
+    âœ“ Application Angular opÃ©rationnelle (AT2)
+  </div>
+
+  <footer>
+    <p>Exam AT2 - DÃ©ploiement d'une application en continu</p>
+  </footer>
+</div>

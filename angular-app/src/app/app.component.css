@@ -1,0 +1,85 @@
+:host {
+  --primary: #c3002f;
+  --success: #2e7d32;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95em;
+  margin: 10px 0 0 0;
+}
+
+.info-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.info-card h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #eee;
+}
+
+table td {
+  padding: 12px;
+  text-align: left;
+}
+
+table td:first-child {
+  font-weight: 600;
+  color: #666;
+  width: 40%;
+}
+
+.status-ok {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.success-badge {
+  background: linear-gradient(135deg, var(--success), #1b5e20);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+  font-size: 0.9em;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}

@@ -1,0 +1,27 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# Angular cache
+angular-app/.angular/
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Maven
+target/
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

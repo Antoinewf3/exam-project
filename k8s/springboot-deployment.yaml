@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-hello
+  namespace: app-at2
+  labels:
+    app: springboot-hello
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-hello
+  template:
+    metadata:
+      labels:
+        app: springboot-hello
+        tier: backend
+    spec:
+      containers:
+        - name: springboot-hello
+          image: 967380192805.dkr.ecr.eu-west-3.amazonaws.com/springboot-hello:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: ENVIRONMENT
+              value: "EKS-Production"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
